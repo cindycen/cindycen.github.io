@@ -1,7 +1,7 @@
 //*** landing page changing text ***/
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
-    var dataText = [ "marketer", "communicator", "foodie", "content creator"];
+    var dataText = [ "content creator", "marketer", "foodie", "technical writer"];
     
     // type one text in the typwriter
     // keeps calling itself until the text is finished
@@ -115,38 +115,11 @@ $(document).ready(function(){
   });
 });
 
-//*** playground link scroll ***//
-$(document).ready(function(){       
-  var scroll_start = 0;
-  var startchange = $('#experience-finish');
-  var offset = startchange.offset();
-  $(document).scroll(function() { 
-     scroll_start = $(this).scrollTop();
-     if(scroll_start > offset.top) {
-         $('#playground-link').css({"color": "#5784C7", "border-bottom": "solid 3px #5784C7"});
-      } else {
-         $('#playground-link').css({"color": "#99c2ff", "border-bottom": "none"});
-      }
-  });
-});
-
-$(document).ready(function(){       
-  var scroll_start = 0;
-  var startchange = $('#playground-finish');
-  var offset = startchange.offset();
-  $(document).scroll(function() { 
-     scroll_start = $(this).scrollTop();
-     if(scroll_start > offset.top) {
-         $('#playground-link').css({"color": "#99c2ff", "border-bottom": "none"});
-      }
-  });
-});
-
 //*** contact link scroll ***//
 
 $(document).ready(function(){       
   var scroll_start = 0;
-  var startchange = $('#playground-finish');
+  var startchange = $('#experience-finish');
   var offset = startchange.offset();
   $(document).scroll(function() { 
      scroll_start = $(this).scrollTop();
@@ -182,6 +155,7 @@ $(document).ready(function(){
      $(".tabs-list li,.tabs div.tab").removeClass("active");   // removing active class from tab
      $(".tab").hide();   // hiding open tab
      $(tabid).show();    // show tab
+     console.log(tabid)
      $(this).addClass("active"); //  adding active class to clicked tab
 
   });
