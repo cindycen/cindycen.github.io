@@ -1,7 +1,7 @@
 //*** landing page changing text ***/
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
-    var dataText = [ "content creator", "marketer", "foodie", "technical writer"];
+    var dataText = [ "technical writer", "content designer", "foodie", "marketer"];
     
     // type one text in the typwriter
     // keeps calling itself until the text is finished
