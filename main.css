@@ -38,7 +38,7 @@ html {
   font-size: 3em;
   font-weight: bold;
   justify-content: flex-start;
-  padding: 70px 15px 0px 0px;
+  padding: 70px 15px 5px 0px;
   position: -webkit-sticky;
   position: sticky;
   padding-bottom: 2%;
@@ -151,6 +151,10 @@ ul {
   transition-duration: 0.3s;
 }
 
+#home-image {
+  padding: 0 0 0 20px; 
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
@@ -164,13 +168,13 @@ ul {
 /*landing page*/
 
 .landing-page {
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
   height: 70vh;
   overflow: hidden;
-  padding: 10% 10%;
+  padding: 15% 1% 10% 10%;
   position: relative;
+  justify-content: space-between;
 }
 
 .landing-page-text {
@@ -190,6 +194,10 @@ ul {
   justify-content: flex-start;
 }
 
+.landing-page-image {
+  flex: right; 
+}
+
 #aboutmechangingtext {
   border-right: 0.05em solid;
   animation: caret 1s steps(1) infinite;
@@ -203,6 +211,17 @@ ul {
 
 #landing-page-note {
   color: grey;
+}
+
+/* moving eye */
+
+.main {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+#eyes, #eyes img {
+  position: absolute;
 }
 
 /*about page */
@@ -255,7 +274,7 @@ ul {
   text-align: center;
   display: inline-flex;
   background-color: #5784c7;
-  border-radius: 3px;
+  border-radius: 3px 3px 0 0;
 }
 .tabs .tabs-list li:hover {
   cursor: pointer;
@@ -272,16 +291,22 @@ ul {
   min-height: 250px;
   height: auto;
   border-radius: 3px;
-  padding: 5px 15px;
+  padding: 1px 15px 5px 15px;
   background-color: lavender;
   color: black;
   clear: both;
 }
 .tabs .tab h3 {
-  border-bottom: 3px solid #5784c7;
   letter-spacing: 1px;
   font-weight: normal;
-  padding: 2px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+.tabs .tab h4 {
+  border-bottom: 3px solid #5784c7;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
 }
 .tabs .tab p {
   line-height: 20px;
@@ -436,8 +461,24 @@ ul {
 
 /*----- MOBILE ------*/
 
-@media (min-width: 320px) and (max-width: 420px) {
-  html {
-    width: 95%;
+ @media (min-width: 320px) and (max-width: 768px) {
+  .landing-page-text {
+      font-size: 1.5em;
+  }
+  .landing-page-title {
+      font-size: 4em;
+  }
+  .landing-page-text-container {
+      margin-top: 15%;
+  }
+  .nav-container {
+      position: absolute;
+      width: 100%;
+  }
+  .home-image {
+      margin-top: 5%;
+  }
+  .about-image {
+      display: none;
   }
 }
